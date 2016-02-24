@@ -1,6 +1,6 @@
 #!/usr/bin/python
 #coding=utf-8
-
+import FileDialog
 import os
 from Tkinter import *
 import ttk
@@ -25,9 +25,9 @@ class LawSearch():
         path = sys.path[0]
         #判断为脚本文件还是py2exe编译后的文件，如果是脚本文件，则返回的是脚本的目录，如果是py2exe编译后的文件，则返回的是编译后的文件路径
         if os.path.isdir(path):
-            return path
+            return os.getcwd()
         elif os.path.isfile(path):
-            return os.path.dirname(path)  
+            return os.getcwd() 
 
     
     def creatWidgets(self):
@@ -106,7 +106,6 @@ class LawSearch():
     
     def onlineUpdateInfo(self):
         tkMessageBox.showinfo("在线升级", "在线升级中，请稍候...")
-        time.sleep(5)
         tkMessageBox.showinfo("在线升级", "升级完成")
     
     def helpInfo(self):
