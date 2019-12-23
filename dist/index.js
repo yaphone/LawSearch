@@ -27,10 +27,13 @@ function search(keyWord) {
     var ret = [];
     var data = fs.readFileSync('./static/law/道路交通事故处理程序规定.txt').toString();
     var pos = data.indexOf(keyWord);
-    if (pos > -1) {
+    while (pos > -1) {
         var index1 = data.regexIndexOf(re, pos);
         var index2 = data.regexLastIndexOf(re, pos);
         console.log(data.substring(index2, index1));
+        console.log('***********************************');
+        data = data.substring(index2 + 1);
+        pos = data.indexOf(keyWord);
     }
 }
 search('列情形之一的');

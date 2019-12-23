@@ -31,10 +31,13 @@ function search(keyWord: string) {
   let ret = []
   let data = fs.readFileSync('./static/law/道路交通事故处理程序规定.txt').toString()
   let pos = data.indexOf(keyWord);
-  if(pos > -1) {
+  while(pos > -1) {
     let index1 = data.regexIndexOf(re, pos)
     let index2 = data.regexLastIndexOf(re, pos)
     console.log(data.substring(index2, index1))
+    console.log('***********************************')
+    data = data.substring(index2 + 1)
+    pos = data.indexOf(keyWord)
   }
 }
 
