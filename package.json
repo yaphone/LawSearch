@@ -1,0 +1,24 @@
+{
+  "name": "lawsearch",
+  "version": "1.0.0",
+  "description": "* 后台环境：阿里云 ubuntu14.04 + tomcat7\r * 前端：bootstrap + jquery",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tsc && node ./dist/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yaphone/LawSearch.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yaphone/LawSearch/issues"
+  },
+  "homepage": "https://github.com/yaphone/LawSearch#readme",
+  "dependencies": {
+    "@types/node": "^12.12.21",
+    "tslint": "^5.20.1"
+  }
+}
